@@ -32,10 +32,21 @@ data={
       "live status of train 16236",
       "what is the current status of train 16236"
     ]
+  },
+  "flight_status_query": {
+    "examples": [
+      "Where is the flight fl1234 now",
+      "show me the status of flight #fl1235",
+      "when is the flight fl1236 expected at Bangalore international airport",
+      "Is the flight fl7896 on time",
+      "tell me the flight status, fl34556",
+      "live status of flight fl4567",
+      "what is the current status of flight fl16236"
+    ]
   }
 }
 
 classifier.train_examples(data);
 
-for text in ["hi", "tell me the pnr status for 2436014234", "what is the status of train 16236"]:
+for text in ["hi", "tell me the pnr status for 2436014234", "what is the status of train 16236", "show me the status of flight fl78967"]:
     print "text : '{0}', predicted_label : '{1}'".format(text, classifier.get_intent(text))

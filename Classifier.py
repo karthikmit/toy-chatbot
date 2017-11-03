@@ -60,6 +60,7 @@ class IntentClassifier:
           self.idfMap.pop(token, None);
 
     print "Scores :: "
+    print keys
     print scores
     return keys[np.argmin(scores)]
 
